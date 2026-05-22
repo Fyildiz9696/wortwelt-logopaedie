@@ -138,7 +138,7 @@ export interface SiteData {
 
 const site: SiteData = {
   company: "Wortwelt Logopädie",
-  logo: "/images/logo.svg",
+  logo: "/images/logo.webp",
   tagline: "Logopädische Praxis für Kinder und Erwachsene in Berlin-Treptow",
   url: "https://wortwelt-logopaedie.de",
   lang: "de",
