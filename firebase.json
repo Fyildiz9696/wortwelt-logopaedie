@@ -8,6 +8,10 @@
     ],
     "rewrites": [
       {
+        "source": "/.well-known/**",
+        "destination": "/.well-known/**"
+      },
+      {
         "source": "**",
         "destination": "/404.html"
       }
