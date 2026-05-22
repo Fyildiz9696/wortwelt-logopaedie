@@ -185,7 +185,7 @@ const site: SiteData = {
   },
 
   openingHours: [
-    { days: "Mo–Fr", hours: "08:00–18:00 Uhr" },
+    { days: "Mo–Fr", hours: "09:00–18:00 Uhr" },
     { days: "Sa–So", hours: "Geschlossen" },
   ],
 
@@ -237,12 +237,7 @@ const site: SiteData = {
       description:
         "Behandlung von funktionellen und organischen Stimmstörungen — für Berufssprecher, Sänger und alle, die ihre Stimme brauchen.",
     },
-    {
-      icon: "message-circle",
-      title: "Stottern & Poltern",
-      description:
-        "Individuelle Therapiekonzepte bei Redeflussstörungen für Kinder, Jugendliche und Erwachsene.",
-    },
+
     {
       icon: "utensils",
       title: "Schlucktherapie",
@@ -350,7 +345,7 @@ const site: SiteData = {
     {
       question: "Was soll ich zum Ersttermin mitbringen?",
       answer:
-        "Bitte bringen Sie die Heilmittelverordnung Ihres Arztes, Ihre Versichertenkarte sowie eventuell vorhandene Vorbefunde (z. B. von HNO, Pädaudiologe oder SPZ) mit.",
+        "Bitte bringen Sie die Heilmittelverordnung Ihres Arztes sowie eventuell vorhandene Vorbefunde (z. B. von HNO, Pädaudiologe oder SPZ) mit.",
     },
   ],
 
