@@ -189,9 +189,7 @@ const site: SiteData = {
     { days: "Sa–So", hours: "Geschlossen" },
   ],
 
-  social: {
-    instagram: "https://instagram.com/wortwelt.logopaedie",
-  },
+  social: {},
 
   nav: [
     { label: "Leistungen", href: "#services" },
