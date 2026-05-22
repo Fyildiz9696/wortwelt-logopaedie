@@ -1,13 +1,12 @@
 ---
 /**
- * impressum.astro — Impressum (Pflichtseite)
+ * impressum.astro — Impressum gemäß § 5 TMG
  *
- * ACHTUNG:  WICHTIG: Diese Seite enthält NUR Platzhalter-Inhalte!
- * Vor dem Go-Live MUSS das Impressum mit echten Kundendaten vervollständigt
- * und von einem Rechtsanwalt oder über einen Impressum-Generator geprüft werden.
+ * Stand: 2026 — echte Kundendaten von Alphan Elduran / Logopädie WortWelt
  *
- * Pflichtangaben gemäß § 5 TMG (Telemediengesetz):
- * https://www.gesetze-im-internet.de/tmg/__5.html
+ * ⚠️  NOCH AUSSTEHEND (vor Go-Live ausfüllen):
+ *   1. Steuernummer (Finanzamt Berlin)
+ *   2. Ggf. Hinweis auf Umsatzsteuerbefreiung § 4 Nr. 14 UStG bestätigen
  */
 import PageLayout from "@layouts/PageLayout.astro";
 import site from "@data/site";
@@ -15,7 +14,7 @@ import site from "@data/site";
 
 <PageLayout
   title="Impressum"
-  description="Impressum und Anbieterkennzeichnung"
+  description="Impressum und Anbieterkennzeichnung der Logopädie WortWelt, Berlin"
   robots="noindex, nofollow"
 >
   <section class="page-hero section--surface">
@@ -27,64 +26,62 @@ import site from "@data/site";
   <section class="section">
     <div class="container legal-content">
 
-      <div class="legal-notice">
-        <p>
-          ACHTUNG: <strong>Hinweis:</strong> Diese Seite enthält Platzhalter-Inhalte.
-          Die mit <code>[TODO]</code> markierten Felder müssen vor dem Go-Live mit
-          den echten Unternehmensdaten ergänzt werden. Das Impressum ist rechtlich
-          zu prüfen und gegebenenfalls durch eine juristische Fachkraft zu vervollständigen.
-        </p>
-      </div>
-
       <!-- ── Angaben gemäß § 5 TMG ─────────────────────────────────── -->
       <h2>Angaben gemäß § 5 TMG</h2>
 
-      <h3>Name und Anschrift</h3>
+      <h3>Diensteanbieter</h3>
       <address>
-        <p>{site.company}</p>
-        <p>Einzelunternehmen</p>
+        <p>Alphan Elduran</p>
+        <p>Logopädie WortWelt</p>
         <p>{site.contact.address.street}</p>
         <p>{site.contact.address.zip} {site.contact.address.city}</p>
         <p>Deutschland</p>
       </address>
 
-      <h3>Vertretungsberechtigte Person</h3>
-      <p>Alphan Elduran</p>
-
       <h3>Kontakt</h3>
       <p>
-        Telefon: <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`}>{site.contact.phone}</a><br />
+        Telefon: <a href="tel:+491785607484">0178 5607484</a><br />
         E-Mail: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
       </p>
 
-      <!-- ── Registerangaben (wenn zutreffend) ──────────────────────── -->
-      <h3>Registerangaben</h3>
+      <!-- ── Steuer ──────────────────────────────────────────────────── -->
+      <h3>Steuerliche Angaben</h3>
+      <div class="todo-box">
+        <strong>⚠️ TODO (vor Go-Live):</strong> Steuernummer des zuständigen Finanzamts eintragen.<br />
+        Beispiel: <em>Steuernummer: 18/369/XXXXX (Finanzamt Berlin-Treptow)</em><br /><br />
+        Hinweis: Als Logopäde (Heilmittelerbringer) sind Leistungen i.d.R. nach
+        <strong>§ 4 Nr. 14 UStG umsatzsteuerfrei</strong> — bitte mit Steuerberater abstimmen
+        und ggf. folgenden Hinweis stattdessen eintragen:<br />
+        <em>„Gemäß § 4 Nr. 14 UStG sind unsere Leistungen von der Umsatzsteuer befreit.
+        Eine Umsatzsteuer-Identifikationsnummer liegt daher nicht vor."</em>
+      </div>
+
+      <!-- ── Berufsrechtliche Angaben ───────────────────────────────── -->
+      <h2>Berufsrechtliche Angaben</h2>
+
+      <h3>Berufsbezeichnung und Berufszulassung</h3>
       <p>
-        [TODO: Falls im Handels-, Vereins-, Partnerschafts- oder Genossenschaftsregister
-        eingetragen, hier Registernummer und Registergericht eintragen. Beispiel:<br />
-        <em>Handelsregister: HRB 12345, Amtsgericht Musterstadt</em>]
+        Berufsbezeichnung: <strong>Logopäde</strong><br />
+        Berufsbezeichnung verliehen in: <strong>Deutschland</strong>
       </p>
 
-      <!-- ── Umsatzsteuer-ID (wenn zutreffend) ──────────────────────── -->
-      <h3>Umsatzsteuer-Identifikationsnummer</h3>
+      <h3>Gesetzliche Berufsbezeichnung / Rechtsgrundlage</h3>
       <p>
-        [TODO: Falls vorhanden, USt-IdNr. gemäß § 27a UStG eintragen, z. B.:<br />
-        <em>DE 123 456 789</em>. Wenn keine USt-IdNr. vorhanden, diesen Abschnitt entfernen.]
+        Gesetz über den Beruf des Logopäden (Logopädengesetz – LogopG)<br />
+        BGBl. I 1980 S. 529, zuletzt geändert durch Art. 58 G v. 12.12.2019 BGBl. I S. 2652
       </p>
 
-      <!-- ── Wirtschaftsidentifikationsnummer (ab 2024, DE) ─────────── -->
-      <h3>Wirtschafts-Identifikationsnummer</h3>
-      <p>
-        [TODO: Wirtschafts-Identifikationsnummer gemäß § 139c AO eintragen, sobald zugeteilt.
-        Gilt in Deutschland ab Einführung. Noch nicht zugeteilt = diesen Abschnitt entfernen.]
-      </p>
-
-      <!-- ── Berufsrechtliche Angaben (wenn zutreffend) ─────────────── -->
-      <h3>Berufsrechtliche Angaben</h3>
-      <p>
-        Berufsbezeichnung: Logopäde/Logopädin<br />
-        Zuständige Aufsichtsbehörde: Landesamt für Gesundheit und Soziales Berlin (LAGeSo)
-      </p>
+      <h3>Zuständige Aufsichtsbehörde</h3>
+      <address>
+        <p>Landesamt für Gesundheit und Soziales Berlin (LAGeSo)</p>
+        <p>Turmstraße 21</p>
+        <p>10559 Berlin</p>
+        <p>
+          Web: <a href="https://www.lageso.berlin.de" target="_blank" rel="noopener noreferrer">
+            www.lageso.berlin.de
+          </a>
+        </p>
+      </address>
 
       <!-- ── Streitschlichtung ───────────────────────────────────────── -->
       <h2>Streitschlichtung</h2>
@@ -92,15 +89,11 @@ import site from "@data/site";
         Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
         <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
           https://ec.europa.eu/consumers/odr/
-        </a>.
-      </p>
-      <p>
-        [TODO: E-Mail-Adresse eintragen, die für die OS-Plattform gilt]
+        </a>
       </p>
       <p>
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-        Verbraucherschlichtungsstelle teilzunehmen. [TODO: Prüfen ob zutreffend und ggf.
-        Schlichtungsstelle angeben]
+        Verbraucherschlichtungsstelle teilzunehmen.
       </p>
 
       <!-- ── Haftungsausschluss ─────────────────────────────────────── -->
@@ -108,27 +101,29 @@ import site from "@data/site";
 
       <h3>Haftung für Inhalte</h3>
       <p>
-        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten
-        nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
-        Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
-        Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
-        Tätigkeit hinweisen.
+        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen
+        Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
+        als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
+        Informationen zu überwachen oder nach Umständen zu forschen, die auf eine
+        rechtswidrige Tätigkeit hinweisen.
       </p>
 
       <h3>Haftung für Links</h3>
       <p>
-        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
-        Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
-        Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
-        Seiten verantwortlich.
+        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir
+        keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
+        Anbieter oder Betreiber verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt
+        der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren
+        nicht erkennbar.
       </p>
 
       <h3>Urheberrecht</h3>
       <p>
-        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
-        dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
-        der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
-        Zustimmung des jeweiligen Autors bzw. Erstellers.
+        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+        unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung,
+        Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes
+        bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+
       </p>
 
     </div>
@@ -146,15 +141,6 @@ import site from "@data/site";
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-
-  .legal-notice {
-    background: #fef3c7;
-    border: 1px solid #fbbf24;
-    border-radius: var(--radius);
-    padding: 1rem 1.25rem;
-    font-size: 0.9rem;
-    line-height: 1.6;
   }
 
   .legal-content h2 {
@@ -180,10 +166,13 @@ import site from "@data/site";
   .legal-content address p { margin-bottom: 0.1rem; }
   .legal-content a { color: var(--color-primary); }
 
-  .legal-content code {
-    background: var(--color-surface);
-    padding: 0.1em 0.4em;
-    border-radius: 3px;
-    font-size: 0.85em;
+  .todo-box {
+    background: #fef3c7;
+    border: 1px solid #fbbf24;
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #78350f;
   }
 </style>
