@@ -176,7 +176,7 @@ const site: SiteData = {
 
   contact: {
     email: "info@wortwelt-logopaedie.de",
-    phone: "+49 178 5607484",
+    phone: "0178 5607484",
     address: {
       street: "Kiefholzstraße 253",
       zip: "12437",
